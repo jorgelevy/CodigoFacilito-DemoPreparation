@@ -17,10 +17,10 @@ jobs:
         application_id: ${{ vars.GH_APP_ID }}
         application_private_key: ${{ secrets.GH_APP_KEY }}
         
-    - uses: actions/checkout@v3
-      with:
-        token: ${{ steps.get_workflow_token.outputs.token }}
-        repository: jorgelevy/CodigoFacilito-DemoPreparation-Private
+#     - uses: actions/checkout@v3
+#       with:
+#         token: ${{ steps.get_workflow_token.outputs.token }}
+#         repository: jorgelevy/CodigoFacilito-DemoPreparation-Private
 
-#     - run: | 
-#         git clone "https://x:${{ steps.get_workflow_token.outputs.token }}@github.com/rob-demo/example-demo.git"
+    - run: | 
+        git clone "https://x:${{ steps.get_workflow_token.outputs.token }}@github.com/jorgelevy/CodigoFacilito-DemoPreparation-Private.git"
