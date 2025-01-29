@@ -1,0 +1,16 @@
+name: Use GitHub App
+on:
+  workflow_dispatch:
+
+  push:
+    paths:
+    - .github/workflows/use-github-app.yml
+
+jobs:
+  checkout-other-repos:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: action/checkout@v3
+      with:
+        token: ${{ github.toke }}
+        repositoy: jorgelevy/devhome
